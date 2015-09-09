@@ -1,0 +1,1102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Program_Art_ProyectoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Program_Art_ProyectoModelStoreContainer">
+          <EntitySet Name="Ambiente" EntityType="Program_Art_ProyectoModel.Store.Ambiente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Centro" EntityType="Program_Art_ProyectoModel.Store.Centro" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Centro_Has_Torre" EntityType="Program_Art_ProyectoModel.Store.Centro_Has_Torre" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ficha" EntityType="Program_Art_ProyectoModel.Store.Ficha" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ficha_Has_Ambiente" EntityType="Program_Art_ProyectoModel.Store.Ficha_Has_Ambiente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ficha_has_Usuario" EntityType="Program_Art_ProyectoModel.Store.Ficha_has_Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Horario" EntityType="Program_Art_ProyectoModel.Store.Horario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Programa" EntityType="Program_Art_ProyectoModel.Store.Programa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="registro" EntityType="Program_Art_ProyectoModel.Store.registro" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo_Usuario" EntityType="Program_Art_ProyectoModel.Store.Tipo_Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Torre" EntityType="Program_Art_ProyectoModel.Store.Torre" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="Program_Art_ProyectoModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Ambiente__Id_Tor__1273C1CD" Association="Program_Art_ProyectoModel.Store.FK__Ambiente__Id_Tor__1273C1CD">
+            <End Role="Torre" EntitySet="Torre" />
+            <End Role="Ambiente" EntitySet="Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Centro_Ha__Id_Ce__0CBAE877" Association="Program_Art_ProyectoModel.Store.FK__Centro_Ha__Id_Ce__0CBAE877">
+            <End Role="Centro" EntitySet="Centro" />
+            <End Role="Centro_Has_Torre" EntitySet="Centro_Has_Torre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Centro_Ha__Id_To__0DAF0CB0" Association="Program_Art_ProyectoModel.Store.FK__Centro_Ha__Id_To__0DAF0CB0">
+            <End Role="Torre" EntitySet="Torre" />
+            <End Role="Centro_Has_Torre" EntitySet="Centro_Has_Torre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha__Id_Horari__1BFD2C07" Association="Program_Art_ProyectoModel.Store.FK__Ficha__Id_Horari__1BFD2C07">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Ficha" EntitySet="Ficha" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha__Id_Progra__1B0907CE" Association="Program_Art_ProyectoModel.Store.FK__Ficha__Id_Progra__1B0907CE">
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Ficha" EntitySet="Ficha" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Am__239E4DCF" Association="Program_Art_ProyectoModel.Store.FK__Ficha_Has__Id_Am__239E4DCF">
+            <End Role="Ambiente" EntitySet="Ambiente" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Fi__20C1E124" Association="Program_Art_ProyectoModel.Store.FK__Ficha_Has__Id_Fi__20C1E124">
+            <End Role="Ficha" EntitySet="Ficha" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Fi__36B12243" Association="Program_Art_ProyectoModel.Store.FK__Ficha_has__Id_Fi__36B12243">
+            <End Role="Ficha" EntitySet="Ficha" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Ho__22AA2996" Association="Program_Art_ProyectoModel.Store.FK__Ficha_Has__Id_Ho__22AA2996">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Ho__38996AB5" Association="Program_Art_ProyectoModel.Store.FK__Ficha_has__Id_Ho__38996AB5">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Pr__21B6055D" Association="Program_Art_ProyectoModel.Store.FK__Ficha_Has__Id_Pr__21B6055D">
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Pr__37A5467C" Association="Program_Art_ProyectoModel.Store.FK__Ficha_has__Id_Pr__37A5467C">
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_To__24927208" Association="Program_Art_ProyectoModel.Store.FK__Ficha_Has__Id_To__24927208">
+            <End Role="Torre" EntitySet="Torre" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Us__398D8EEE" Association="Program_Art_ProyectoModel.Store.FK__Ficha_has__Id_Us__398D8EEE">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registro__Id_Usu__6EF57B66" Association="Program_Art_ProyectoModel.Store.FK__registro__Id_Usu__6EF57B66">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="registro" EntitySet="registro" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tipo_Usua__Id_Us__2D27B809" Association="Program_Art_ProyectoModel.Store.FK__Tipo_Usua__Id_Us__2D27B809">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Tipo_Usuario" EntitySet="Tipo_Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Ambiente">
+          <Key>
+            <PropertyRef Name="Id_Ambiente" />
+          </Key>
+          <Property Name="Id_Ambiente" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="Desc_Ambiente" Type="varchar" MaxLength="50" />
+          <Property Name="Id_Torre" Type="numeric" Precision="3" />
+        </EntityType>
+        <EntityType Name="Centro">
+          <Key>
+            <PropertyRef Name="Id_Centro" />
+          </Key>
+          <Property Name="Id_Centro" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="Nombre_Centro" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Direccion_Centro" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Centro_Has_Torre">
+          <Key>
+            <PropertyRef Name="Id_Centro_Torre" />
+          </Key>
+          <Property Name="Id_Centro_Torre" Type="numeric" Nullable="false" Precision="3" />
+          <Property Name="Id_Centro" Type="numeric" Precision="4" />
+          <Property Name="Id_Torre" Type="numeric" Precision="3" />
+        </EntityType>
+        <EntityType Name="Ficha">
+          <Key>
+            <PropertyRef Name="Id_Ficha" />
+          </Key>
+          <Property Name="Id_Ficha" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Id_Programa" Type="numeric" Precision="10" />
+          <Property Name="Id_Horario" Type="numeric" Precision="4" />
+        </EntityType>
+        <EntityType Name="Ficha_Has_Ambiente">
+          <Key>
+            <PropertyRef Name="Id_Ficha_Amb" />
+          </Key>
+          <Property Name="Id_Ficha_Amb" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Id_Ficha" Type="numeric" Precision="10" />
+          <Property Name="Id_Programa" Type="numeric" Precision="10" />
+          <Property Name="Id_Horario" Type="numeric" Precision="4" />
+          <Property Name="Id_Ambiente" Type="numeric" Precision="4" />
+          <Property Name="Id_Torre" Type="numeric" Precision="3" />
+        </EntityType>
+        <EntityType Name="Ficha_has_Usuario">
+          <Key>
+            <PropertyRef Name="Id_Ficha_Usu" />
+          </Key>
+          <Property Name="Id_Ficha_Usu" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="Id_Ficha" Type="numeric" Precision="10" />
+          <Property Name="Id_Programa" Type="numeric" Precision="10" />
+          <Property Name="Id_Horario" Type="numeric" Precision="4" />
+          <Property Name="Id_Usuario" Type="numeric" Precision="15" />
+        </EntityType>
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="Id_Horario" />
+          </Key>
+          <Property Name="Id_Horario" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="Nombre_Horario" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Trimestre" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Ini_Trimestre" Type="date" />
+          <Property Name="Fin_Trimestre" Type="date" />
+        </EntityType>
+        <EntityType Name="Programa">
+          <Key>
+            <PropertyRef Name="Id_Programa" />
+          </Key>
+          <Property Name="Id_Programa" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Nombre_Programa" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Desc_Programa" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="registro">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fecha_registro" Type="datetime" />
+          <Property Name="asistencia" Type="bit" Nullable="false" />
+          <Property Name="Id_Usuario" Type="numeric" Precision="15" />
+        </EntityType>
+        <EntityType Name="Tipo_Usuario">
+          <Key>
+            <PropertyRef Name="Id_Tipo" />
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Tipo" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="Desc_Tipo_Usu" Type="varchar" MaxLength="50" />
+          <Property Name="Id_Usuario" Type="numeric" Nullable="false" Precision="15" />
+        </EntityType>
+        <EntityType Name="Torre">
+          <Key>
+            <PropertyRef Name="Id_Torre" />
+          </Key>
+          <Property Name="Id_Torre" Type="numeric" Nullable="false" Precision="3" />
+          <Property Name="Nombre_Torre" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="numeric" Nullable="false" Precision="15" />
+          <Property Name="Tipo_Documento" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Nombre_Usuario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Apellidos_Usuario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Correo_Usuario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Telefono_Usuario" Type="varchar" MaxLength="30" />
+          <Property Name="Contraseña_Usuario" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__Ambiente__Id_Tor__1273C1CD">
+          <End Role="Torre" Type="Program_Art_ProyectoModel.Store.Torre" Multiplicity="0..1" />
+          <End Role="Ambiente" Type="Program_Art_ProyectoModel.Store.Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Principal>
+            <Dependent Role="Ambiente">
+              <PropertyRef Name="Id_Torre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Centro_Ha__Id_Ce__0CBAE877">
+          <End Role="Centro" Type="Program_Art_ProyectoModel.Store.Centro" Multiplicity="0..1" />
+          <End Role="Centro_Has_Torre" Type="Program_Art_ProyectoModel.Store.Centro_Has_Torre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Centro">
+              <PropertyRef Name="Id_Centro" />
+            </Principal>
+            <Dependent Role="Centro_Has_Torre">
+              <PropertyRef Name="Id_Centro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Centro_Ha__Id_To__0DAF0CB0">
+          <End Role="Torre" Type="Program_Art_ProyectoModel.Store.Torre" Multiplicity="0..1" />
+          <End Role="Centro_Has_Torre" Type="Program_Art_ProyectoModel.Store.Centro_Has_Torre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Principal>
+            <Dependent Role="Centro_Has_Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha__Id_Horari__1BFD2C07">
+          <End Role="Horario" Type="Program_Art_ProyectoModel.Store.Horario" Multiplicity="0..1" />
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Store.Ficha" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id_Horario" />
+            </Principal>
+            <Dependent Role="Ficha">
+              <PropertyRef Name="Id_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha__Id_Progra__1B0907CE">
+          <End Role="Programa" Type="Program_Art_ProyectoModel.Store.Programa" Multiplicity="0..1" />
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Store.Ficha" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programa">
+              <PropertyRef Name="Id_Programa" />
+            </Principal>
+            <Dependent Role="Ficha">
+              <PropertyRef Name="Id_Programa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Am__239E4DCF">
+          <End Role="Ambiente" Type="Program_Art_ProyectoModel.Store.Ambiente" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Store.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ambiente">
+              <PropertyRef Name="Id_Ambiente" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Ambiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Fi__20C1E124">
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Store.Ficha" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Store.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ficha">
+              <PropertyRef Name="Id_Ficha" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Ficha" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Fi__36B12243">
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Store.Ficha" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Store.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ficha">
+              <PropertyRef Name="Id_Ficha" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Ficha" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Ho__22AA2996">
+          <End Role="Horario" Type="Program_Art_ProyectoModel.Store.Horario" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Store.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id_Horario" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Ho__38996AB5">
+          <End Role="Horario" Type="Program_Art_ProyectoModel.Store.Horario" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Store.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id_Horario" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Pr__21B6055D">
+          <End Role="Programa" Type="Program_Art_ProyectoModel.Store.Programa" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Store.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programa">
+              <PropertyRef Name="Id_Programa" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Programa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Pr__37A5467C">
+          <End Role="Programa" Type="Program_Art_ProyectoModel.Store.Programa" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Store.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programa">
+              <PropertyRef Name="Id_Programa" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Programa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_To__24927208">
+          <End Role="Torre" Type="Program_Art_ProyectoModel.Store.Torre" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Store.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Torre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Us__398D8EEE">
+          <End Role="Usuario" Type="Program_Art_ProyectoModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Store.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registro__Id_Usu__6EF57B66">
+          <End Role="Usuario" Type="Program_Art_ProyectoModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="registro" Type="Program_Art_ProyectoModel.Store.registro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="registro">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tipo_Usua__Id_Us__2D27B809">
+          <End Role="Usuario" Type="Program_Art_ProyectoModel.Store.Usuario" Multiplicity="1" />
+          <End Role="Tipo_Usuario" Type="Program_Art_ProyectoModel.Store.Tipo_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Tipo_Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="Aprendiz" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_Usuario" Type="numeric" Mode="In" />
+          <Parameter Name="Contraseña_Usuario" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="buscar_fechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="From" Type="datetime" Mode="In" />
+          <Parameter Name="To" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="buscar_ina_aprendiz" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="From" Type="datetime" Mode="In" />
+          <Parameter Name="To" Type="datetime" Mode="In" />
+          <Parameter Name="Documento" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Contra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_Usuario" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="ContraAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_Usuario" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="ModiContra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Contraseña_Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Id_Usuario" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="mostrareporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fecha_registro" Type="date" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Program_Art_ProyectoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Program_Art_ProyectoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ambiente" EntityType="Program_Art_ProyectoModel.Ambiente" />
+          <EntitySet Name="Centro" EntityType="Program_Art_ProyectoModel.Centro" />
+          <EntitySet Name="Centro_Has_Torre" EntityType="Program_Art_ProyectoModel.Centro_Has_Torre" />
+          <EntitySet Name="Ficha" EntityType="Program_Art_ProyectoModel.Ficha" />
+          <EntitySet Name="Ficha_Has_Ambiente" EntityType="Program_Art_ProyectoModel.Ficha_Has_Ambiente" />
+          <EntitySet Name="Ficha_has_Usuario" EntityType="Program_Art_ProyectoModel.Ficha_has_Usuario" />
+          <EntitySet Name="Horario" EntityType="Program_Art_ProyectoModel.Horario" />
+          <EntitySet Name="Programa" EntityType="Program_Art_ProyectoModel.Programa" />
+          <EntitySet Name="registro" EntityType="Program_Art_ProyectoModel.registro" />
+          <EntitySet Name="Tipo_Usuario" EntityType="Program_Art_ProyectoModel.Tipo_Usuario" />
+          <EntitySet Name="Torre" EntityType="Program_Art_ProyectoModel.Torre" />
+          <EntitySet Name="Usuario" EntityType="Program_Art_ProyectoModel.Usuario" />
+          <AssociationSet Name="FK__Ambiente__Id_Tor__1273C1CD" Association="Program_Art_ProyectoModel.FK__Ambiente__Id_Tor__1273C1CD">
+            <End Role="Torre" EntitySet="Torre" />
+            <End Role="Ambiente" EntitySet="Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Am__239E4DCF" Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Am__239E4DCF">
+            <End Role="Ambiente" EntitySet="Ambiente" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Centro_Ha__Id_Ce__0CBAE877" Association="Program_Art_ProyectoModel.FK__Centro_Ha__Id_Ce__0CBAE877">
+            <End Role="Centro" EntitySet="Centro" />
+            <End Role="Centro_Has_Torre" EntitySet="Centro_Has_Torre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Centro_Ha__Id_To__0DAF0CB0" Association="Program_Art_ProyectoModel.FK__Centro_Ha__Id_To__0DAF0CB0">
+            <End Role="Torre" EntitySet="Torre" />
+            <End Role="Centro_Has_Torre" EntitySet="Centro_Has_Torre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha__Id_Horari__1BFD2C07" Association="Program_Art_ProyectoModel.FK__Ficha__Id_Horari__1BFD2C07">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Ficha" EntitySet="Ficha" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha__Id_Progra__1B0907CE" Association="Program_Art_ProyectoModel.FK__Ficha__Id_Progra__1B0907CE">
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Ficha" EntitySet="Ficha" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Fi__20C1E124" Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Fi__20C1E124">
+            <End Role="Ficha" EntitySet="Ficha" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Fi__36B12243" Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Fi__36B12243">
+            <End Role="Ficha" EntitySet="Ficha" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Ho__22AA2996" Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Ho__22AA2996">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_Pr__21B6055D" Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Pr__21B6055D">
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_Has__Id_To__24927208" Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_To__24927208">
+            <End Role="Torre" EntitySet="Torre" />
+            <End Role="Ficha_Has_Ambiente" EntitySet="Ficha_Has_Ambiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Ho__38996AB5" Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Ho__38996AB5">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Pr__37A5467C" Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Pr__37A5467C">
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ficha_has__Id_Us__398D8EEE" Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Us__398D8EEE">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Ficha_has_Usuario" EntitySet="Ficha_has_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registro__Id_Usu__6EF57B66" Association="Program_Art_ProyectoModel.FK__registro__Id_Usu__6EF57B66">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="registro" EntitySet="registro" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tipo_Usua__Id_Us__2D27B809" Association="Program_Art_ProyectoModel.FK__Tipo_Usua__Id_Us__2D27B809">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Tipo_Usuario" EntitySet="Tipo_Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Ambiente">
+          <Key>
+            <PropertyRef Name="Id_Ambiente" />
+          </Key>
+          <Property Name="Id_Ambiente" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Desc_Ambiente" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Id_Torre" Type="Decimal" Precision="3" Scale="0" />
+          <NavigationProperty Name="Torre" Relationship="Program_Art_ProyectoModel.FK__Ambiente__Id_Tor__1273C1CD" FromRole="Ambiente" ToRole="Torre" />
+          <NavigationProperty Name="Ficha_Has_Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Am__239E4DCF" FromRole="Ambiente" ToRole="Ficha_Has_Ambiente" />
+        </EntityType>
+        <EntityType Name="Centro">
+          <Key>
+            <PropertyRef Name="Id_Centro" />
+          </Key>
+          <Property Name="Id_Centro" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Nombre_Centro" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Direccion_Centro" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Centro_Has_Torre" Relationship="Program_Art_ProyectoModel.FK__Centro_Ha__Id_Ce__0CBAE877" FromRole="Centro" ToRole="Centro_Has_Torre" />
+        </EntityType>
+        <EntityType Name="Centro_Has_Torre">
+          <Key>
+            <PropertyRef Name="Id_Centro_Torre" />
+          </Key>
+          <Property Name="Id_Centro_Torre" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="Id_Centro" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="Id_Torre" Type="Decimal" Precision="3" Scale="0" />
+          <NavigationProperty Name="Centro" Relationship="Program_Art_ProyectoModel.FK__Centro_Ha__Id_Ce__0CBAE877" FromRole="Centro_Has_Torre" ToRole="Centro" />
+          <NavigationProperty Name="Torre" Relationship="Program_Art_ProyectoModel.FK__Centro_Ha__Id_To__0DAF0CB0" FromRole="Centro_Has_Torre" ToRole="Torre" />
+        </EntityType>
+        <EntityType Name="Ficha">
+          <Key>
+            <PropertyRef Name="Id_Ficha" />
+          </Key>
+          <Property Name="Id_Ficha" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Id_Programa" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Id_Horario" Type="Decimal" Precision="4" Scale="0" />
+          <NavigationProperty Name="Horario" Relationship="Program_Art_ProyectoModel.FK__Ficha__Id_Horari__1BFD2C07" FromRole="Ficha" ToRole="Horario" />
+          <NavigationProperty Name="Programa" Relationship="Program_Art_ProyectoModel.FK__Ficha__Id_Progra__1B0907CE" FromRole="Ficha" ToRole="Programa" />
+          <NavigationProperty Name="Ficha_Has_Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Fi__20C1E124" FromRole="Ficha" ToRole="Ficha_Has_Ambiente" />
+          <NavigationProperty Name="Ficha_has_Usuario" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Fi__36B12243" FromRole="Ficha" ToRole="Ficha_has_Usuario" />
+        </EntityType>
+        <EntityType Name="Ficha_Has_Ambiente">
+          <Key>
+            <PropertyRef Name="Id_Ficha_Amb" />
+          </Key>
+          <Property Name="Id_Ficha_Amb" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Id_Ficha" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Id_Programa" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Id_Horario" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="Id_Ambiente" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="Id_Torre" Type="Decimal" Precision="3" Scale="0" />
+          <NavigationProperty Name="Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Am__239E4DCF" FromRole="Ficha_Has_Ambiente" ToRole="Ambiente" />
+          <NavigationProperty Name="Ficha" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Fi__20C1E124" FromRole="Ficha_Has_Ambiente" ToRole="Ficha" />
+          <NavigationProperty Name="Horario" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Ho__22AA2996" FromRole="Ficha_Has_Ambiente" ToRole="Horario" />
+          <NavigationProperty Name="Programa" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Pr__21B6055D" FromRole="Ficha_Has_Ambiente" ToRole="Programa" />
+          <NavigationProperty Name="Torre" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_To__24927208" FromRole="Ficha_Has_Ambiente" ToRole="Torre" />
+        </EntityType>
+        <EntityType Name="Ficha_has_Usuario">
+          <Key>
+            <PropertyRef Name="Id_Ficha_Usu" />
+          </Key>
+          <Property Name="Id_Ficha_Usu" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="Id_Ficha" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Id_Programa" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Id_Horario" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="Id_Usuario" Type="Decimal" Precision="15" Scale="0" />
+          <NavigationProperty Name="Ficha" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Fi__36B12243" FromRole="Ficha_has_Usuario" ToRole="Ficha" />
+          <NavigationProperty Name="Horario" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Ho__38996AB5" FromRole="Ficha_has_Usuario" ToRole="Horario" />
+          <NavigationProperty Name="Programa" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Pr__37A5467C" FromRole="Ficha_has_Usuario" ToRole="Programa" />
+          <NavigationProperty Name="Usuario" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Us__398D8EEE" FromRole="Ficha_has_Usuario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="Id_Horario" />
+          </Key>
+          <Property Name="Id_Horario" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Nombre_Horario" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Trimestre" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Ini_Trimestre" Type="DateTime" />
+          <Property Name="Fin_Trimestre" Type="DateTime" />
+          <NavigationProperty Name="Ficha" Relationship="Program_Art_ProyectoModel.FK__Ficha__Id_Horari__1BFD2C07" FromRole="Horario" ToRole="Ficha" />
+          <NavigationProperty Name="Ficha_Has_Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Ho__22AA2996" FromRole="Horario" ToRole="Ficha_Has_Ambiente" />
+          <NavigationProperty Name="Ficha_has_Usuario" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Ho__38996AB5" FromRole="Horario" ToRole="Ficha_has_Usuario" />
+        </EntityType>
+        <EntityType Name="Programa">
+          <Key>
+            <PropertyRef Name="Id_Programa" />
+          </Key>
+          <Property Name="Id_Programa" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Nombre_Programa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Desc_Programa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Ficha" Relationship="Program_Art_ProyectoModel.FK__Ficha__Id_Progra__1B0907CE" FromRole="Programa" ToRole="Ficha" />
+          <NavigationProperty Name="Ficha_Has_Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Pr__21B6055D" FromRole="Programa" ToRole="Ficha_Has_Ambiente" />
+          <NavigationProperty Name="Ficha_has_Usuario" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Pr__37A5467C" FromRole="Programa" ToRole="Ficha_has_Usuario" />
+        </EntityType>
+        <EntityType Name="registro">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha_registro" Type="DateTime" />
+          <Property Name="asistencia" Type="Boolean" Nullable="false" />
+          <Property Name="Id_Usuario" Type="Decimal" Precision="15" Scale="0" />
+          <NavigationProperty Name="Usuario" Relationship="Program_Art_ProyectoModel.FK__registro__Id_Usu__6EF57B66" FromRole="registro" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Tipo_Usuario">
+          <Key>
+            <PropertyRef Name="Id_Tipo" />
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Tipo" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="Desc_Tipo_Usu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Id_Usuario" Type="Decimal" Nullable="false" Precision="15" Scale="0" />
+          <NavigationProperty Name="Usuario" Relationship="Program_Art_ProyectoModel.FK__Tipo_Usua__Id_Us__2D27B809" FromRole="Tipo_Usuario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Torre">
+          <Key>
+            <PropertyRef Name="Id_Torre" />
+          </Key>
+          <Property Name="Id_Torre" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="Nombre_Torre" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ambiente__Id_Tor__1273C1CD" FromRole="Torre" ToRole="Ambiente" />
+          <NavigationProperty Name="Centro_Has_Torre" Relationship="Program_Art_ProyectoModel.FK__Centro_Ha__Id_To__0DAF0CB0" FromRole="Torre" ToRole="Centro_Has_Torre" />
+          <NavigationProperty Name="Ficha_Has_Ambiente" Relationship="Program_Art_ProyectoModel.FK__Ficha_Has__Id_To__24927208" FromRole="Torre" ToRole="Ficha_Has_Ambiente" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="Decimal" Nullable="false" Precision="15" Scale="0" />
+          <Property Name="Tipo_Documento" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Nombre_Usuario" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Apellidos_Usuario" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Correo_Usuario" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Telefono_Usuario" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Contraseña_Usuario" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Ficha_has_Usuario" Relationship="Program_Art_ProyectoModel.FK__Ficha_has__Id_Us__398D8EEE" FromRole="Usuario" ToRole="Ficha_has_Usuario" />
+          <NavigationProperty Name="registro" Relationship="Program_Art_ProyectoModel.FK__registro__Id_Usu__6EF57B66" FromRole="Usuario" ToRole="registro" />
+          <NavigationProperty Name="Tipo_Usuario" Relationship="Program_Art_ProyectoModel.FK__Tipo_Usua__Id_Us__2D27B809" FromRole="Usuario" ToRole="Tipo_Usuario" />
+        </EntityType>
+        <Association Name="FK__Ambiente__Id_Tor__1273C1CD">
+          <End Role="Torre" Type="Program_Art_ProyectoModel.Torre" Multiplicity="0..1" />
+          <End Role="Ambiente" Type="Program_Art_ProyectoModel.Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Principal>
+            <Dependent Role="Ambiente">
+              <PropertyRef Name="Id_Torre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Am__239E4DCF">
+          <End Role="Ambiente" Type="Program_Art_ProyectoModel.Ambiente" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ambiente">
+              <PropertyRef Name="Id_Ambiente" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Ambiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Centro_Ha__Id_Ce__0CBAE877">
+          <End Role="Centro" Type="Program_Art_ProyectoModel.Centro" Multiplicity="0..1" />
+          <End Role="Centro_Has_Torre" Type="Program_Art_ProyectoModel.Centro_Has_Torre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Centro">
+              <PropertyRef Name="Id_Centro" />
+            </Principal>
+            <Dependent Role="Centro_Has_Torre">
+              <PropertyRef Name="Id_Centro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Centro_Ha__Id_To__0DAF0CB0">
+          <End Role="Torre" Type="Program_Art_ProyectoModel.Torre" Multiplicity="0..1" />
+          <End Role="Centro_Has_Torre" Type="Program_Art_ProyectoModel.Centro_Has_Torre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Principal>
+            <Dependent Role="Centro_Has_Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha__Id_Horari__1BFD2C07">
+          <End Role="Horario" Type="Program_Art_ProyectoModel.Horario" Multiplicity="0..1" />
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Ficha" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id_Horario" />
+            </Principal>
+            <Dependent Role="Ficha">
+              <PropertyRef Name="Id_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha__Id_Progra__1B0907CE">
+          <End Role="Programa" Type="Program_Art_ProyectoModel.Programa" Multiplicity="0..1" />
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Ficha" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programa">
+              <PropertyRef Name="Id_Programa" />
+            </Principal>
+            <Dependent Role="Ficha">
+              <PropertyRef Name="Id_Programa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Fi__20C1E124">
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Ficha" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ficha">
+              <PropertyRef Name="Id_Ficha" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Ficha" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Fi__36B12243">
+          <End Role="Ficha" Type="Program_Art_ProyectoModel.Ficha" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ficha">
+              <PropertyRef Name="Id_Ficha" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Ficha" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Ho__22AA2996">
+          <End Role="Horario" Type="Program_Art_ProyectoModel.Horario" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id_Horario" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_Pr__21B6055D">
+          <End Role="Programa" Type="Program_Art_ProyectoModel.Programa" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programa">
+              <PropertyRef Name="Id_Programa" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Programa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_Has__Id_To__24927208">
+          <End Role="Torre" Type="Program_Art_ProyectoModel.Torre" Multiplicity="0..1" />
+          <End Role="Ficha_Has_Ambiente" Type="Program_Art_ProyectoModel.Ficha_Has_Ambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Torre">
+              <PropertyRef Name="Id_Torre" />
+            </Principal>
+            <Dependent Role="Ficha_Has_Ambiente">
+              <PropertyRef Name="Id_Torre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Ho__38996AB5">
+          <End Role="Horario" Type="Program_Art_ProyectoModel.Horario" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id_Horario" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Pr__37A5467C">
+          <End Role="Programa" Type="Program_Art_ProyectoModel.Programa" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programa">
+              <PropertyRef Name="Id_Programa" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Programa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ficha_has__Id_Us__398D8EEE">
+          <End Role="Usuario" Type="Program_Art_ProyectoModel.Usuario" Multiplicity="0..1" />
+          <End Role="Ficha_has_Usuario" Type="Program_Art_ProyectoModel.Ficha_has_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Ficha_has_Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registro__Id_Usu__6EF57B66">
+          <End Role="Usuario" Type="Program_Art_ProyectoModel.Usuario" Multiplicity="0..1" />
+          <End Role="registro" Type="Program_Art_ProyectoModel.registro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="registro">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tipo_Usua__Id_Us__2D27B809">
+          <End Role="Usuario" Type="Program_Art_ProyectoModel.Usuario" Multiplicity="1" />
+          <End Role="Tipo_Usuario" Type="Program_Art_ProyectoModel.Tipo_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Tipo_Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Program_Art_ProyectoModelStoreContainer" CdmEntityContainer="Program_Art_ProyectoEntities">
+          <EntitySetMapping Name="Ambiente">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Ambiente">
+              <MappingFragment StoreEntitySet="Ambiente">
+                <ScalarProperty Name="Id_Ambiente" ColumnName="Id_Ambiente" />
+                <ScalarProperty Name="Desc_Ambiente" ColumnName="Desc_Ambiente" />
+                <ScalarProperty Name="Id_Torre" ColumnName="Id_Torre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Centro">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Centro">
+              <MappingFragment StoreEntitySet="Centro">
+                <ScalarProperty Name="Id_Centro" ColumnName="Id_Centro" />
+                <ScalarProperty Name="Nombre_Centro" ColumnName="Nombre_Centro" />
+                <ScalarProperty Name="Direccion_Centro" ColumnName="Direccion_Centro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Centro_Has_Torre">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Centro_Has_Torre">
+              <MappingFragment StoreEntitySet="Centro_Has_Torre">
+                <ScalarProperty Name="Id_Centro_Torre" ColumnName="Id_Centro_Torre" />
+                <ScalarProperty Name="Id_Centro" ColumnName="Id_Centro" />
+                <ScalarProperty Name="Id_Torre" ColumnName="Id_Torre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ficha">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Ficha">
+              <MappingFragment StoreEntitySet="Ficha">
+                <ScalarProperty Name="Id_Ficha" ColumnName="Id_Ficha" />
+                <ScalarProperty Name="Id_Programa" ColumnName="Id_Programa" />
+                <ScalarProperty Name="Id_Horario" ColumnName="Id_Horario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ficha_Has_Ambiente">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Ficha_Has_Ambiente">
+              <MappingFragment StoreEntitySet="Ficha_Has_Ambiente">
+                <ScalarProperty Name="Id_Ficha_Amb" ColumnName="Id_Ficha_Amb" />
+                <ScalarProperty Name="Id_Ficha" ColumnName="Id_Ficha" />
+                <ScalarProperty Name="Id_Programa" ColumnName="Id_Programa" />
+                <ScalarProperty Name="Id_Horario" ColumnName="Id_Horario" />
+                <ScalarProperty Name="Id_Ambiente" ColumnName="Id_Ambiente" />
+                <ScalarProperty Name="Id_Torre" ColumnName="Id_Torre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ficha_has_Usuario">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Ficha_has_Usuario">
+              <MappingFragment StoreEntitySet="Ficha_has_Usuario">
+                <ScalarProperty Name="Id_Ficha_Usu" ColumnName="Id_Ficha_Usu" />
+                <ScalarProperty Name="Id_Ficha" ColumnName="Id_Ficha" />
+                <ScalarProperty Name="Id_Programa" ColumnName="Id_Programa" />
+                <ScalarProperty Name="Id_Horario" ColumnName="Id_Horario" />
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Horario">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Horario">
+              <MappingFragment StoreEntitySet="Horario">
+                <ScalarProperty Name="Id_Horario" ColumnName="Id_Horario" />
+                <ScalarProperty Name="Nombre_Horario" ColumnName="Nombre_Horario" />
+                <ScalarProperty Name="Trimestre" ColumnName="Trimestre" />
+                <ScalarProperty Name="Ini_Trimestre" ColumnName="Ini_Trimestre" />
+                <ScalarProperty Name="Fin_Trimestre" ColumnName="Fin_Trimestre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programa">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Programa">
+              <MappingFragment StoreEntitySet="Programa">
+                <ScalarProperty Name="Id_Programa" ColumnName="Id_Programa" />
+                <ScalarProperty Name="Nombre_Programa" ColumnName="Nombre_Programa" />
+                <ScalarProperty Name="Desc_Programa" ColumnName="Desc_Programa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="registro">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.registro">
+              <MappingFragment StoreEntitySet="registro">
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+                <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+                <ScalarProperty Name="asistencia" ColumnName="asistencia" />
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_Usuario">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Tipo_Usuario">
+              <MappingFragment StoreEntitySet="Tipo_Usuario">
+                <ScalarProperty Name="Id_Tipo" ColumnName="Id_Tipo" />
+                <ScalarProperty Name="Desc_Tipo_Usu" ColumnName="Desc_Tipo_Usu" />
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Torre">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Torre">
+              <MappingFragment StoreEntitySet="Torre">
+                <ScalarProperty Name="Id_Torre" ColumnName="Id_Torre" />
+                <ScalarProperty Name="Nombre_Torre" ColumnName="Nombre_Torre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="Program_Art_ProyectoModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Tipo_Documento" ColumnName="Tipo_Documento" />
+                <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+                <ScalarProperty Name="Apellidos_Usuario" ColumnName="Apellidos_Usuario" />
+                <ScalarProperty Name="Correo_Usuario" ColumnName="Correo_Usuario" />
+                <ScalarProperty Name="Telefono_Usuario" ColumnName="Telefono_Usuario" />
+                <ScalarProperty Name="Contraseña_Usuario" ColumnName="Contraseña_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Ambiente" Width="1.5" PointX="3" PointY="3.75" Height="1.9802864583333339" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Centro" Width="1.5" PointX="0.75" PointY="7.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Centro_Has_Torre" Width="1.5" PointX="3" PointY="0.75" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Ficha" Width="1.5" PointX="3" PointY="11.5" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Ficha_Has_Ambiente" Width="1.5" PointX="5.25" PointY="3.125" Height="3.1340950520833339" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Ficha_has_Usuario" Width="1.5" PointX="5.25" PointY="11.375" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Horario" Width="1.5" PointX="0.75" PointY="10" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Programa" Width="1.5" PointX="0.75" PointY="13.25" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.registro" Width="1.5" PointX="5.25" PointY="7.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Tipo_Usuario" Width="1.5" PointX="5.25" PointY="15.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Torre" Width="1.5" PointX="0.75" PointY="3.75" Height="1.9802864583333348" IsExpanded="true" />
+        <EntityTypeShape EntityType="Program_Art_ProyectoModel.Usuario" Width="1.5" PointX="3" PointY="7.25" Height="2.9417936197916674" IsExpanded="true" />
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ambiente__Id_Tor__1273C1CD" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.7401432291666667" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="4.7401432291666659" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="4.7401432291666667" />
+          <ConnectorPoint PointX="3" PointY="4.7401432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Am__239E4DCF" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.7401432291666667" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="4.7401432291666659" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="4.7401432291666667" />
+          <ConnectorPoint PointX="5.25" PointY="4.7401432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Centro_Ha__Id_Ce__0CBAE877" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.25" />
+          <ConnectorPoint PointX="2.625" PointY="6.875" />
+          <ConnectorPoint PointX="2.625" PointY="1.7401432291666663" />
+          <ConnectorPoint PointX="3" PointY="1.7401432291666663" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Centro_Ha__Id_To__0DAF0CB0" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="3.75" />
+          <ConnectorPoint PointX="1.5" PointY="2.2664673437500005" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="2.26646734375" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="2.2664673437500005" />
+          <ConnectorPoint PointX="3" PointY="2.2664673437500005" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha__Id_Horari__1BFD2C07" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.028595377604166" />
+          <ConnectorPoint PointX="2.6041666666666665" PointY="12.028595377604166" />
+          <ConnectorPoint PointX="2.7708333333333335" PointY="12.028595377604166" />
+          <ConnectorPoint PointX="3" PointY="12.028595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha__Id_Progra__1B0907CE" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.557444661458334" />
+          <ConnectorPoint PointX="3" PointY="13.557444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Fi__20C1E124" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.501152846153847" />
+          <ConnectorPoint PointX="4.875" PointY="11.126152846153847" />
+          <ConnectorPoint PointX="4.875" PointY="3.9013196145833327" />
+          <ConnectorPoint PointX="5.25" PointY="3.9013196145833327" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Fi__36B12243" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.714273584535258" />
+          <ConnectorPoint PointX="4.947916666666667" PointY="12.714273584535256" />
+          <ConnectorPoint PointX="5.208333333333333" PointY="12.714273584535258" />
+          <ConnectorPoint PointX="5.25" PointY="12.714273584535258" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Ho__22AA2996" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.063460538461539" />
+          <ConnectorPoint PointX="2.6285744349011204" PointY="9.6848861035604177" />
+          <ConnectorPoint PointX="2.7464255650988791" PointY="9.5670349733626612" />
+          <ConnectorPoint PointX="2.8125" PointY="9.50096053846154" />
+          <ConnectorPoint PointX="2.8125" PointY="6.6340950520833335" />
+          <ConnectorPoint PointX="4.8507692307692309" PointY="6.6340950520833335" />
+          <ConnectorPoint PointX="5.25" PointY="6.2348642828525644" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_Pr__21B6055D" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.313460538461539" />
+          <ConnectorPoint PointX="2.6875" PointY="12.875960538461539" />
+          <ConnectorPoint PointX="2.6875" PointY="6.8840950520833335" />
+          <ConnectorPoint PointX="2.7291666666666665" PointY="6.8840950520833326" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="6.8840950520833335" />
+          <ConnectorPoint PointX="4.6503836153846141" PointY="6.8840950520833335" />
+          <ConnectorPoint PointX="4.8160744349011209" PointY="6.7184042325668258" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="6.6005531023690684" />
+          <ConnectorPoint PointX="5.275383615384615" PointY="6.2590950520833335" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_Has__Id_To__24927208" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="5.7302864583333353" />
+          <ConnectorPoint PointX="1.5" PointY="5.9513233705929487" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="5.9513233705929478" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="5.9513233705929487" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="5.9513233705929478" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="5.9513233705929487" />
+          <ConnectorPoint PointX="5.25" PointY="5.9513233705929487" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Ho__38996AB5" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.40625" />
+          <ConnectorPoint PointX="2.6041666666666665" PointY="11.40625" />
+          <ConnectorPoint PointX="2.7708333333333335" PointY="11.40625" />
+          <ConnectorPoint PointX="4.5115695128205138" PointY="11.40625" />
+          <ConnectorPoint PointX="4.67823617948718" PointY="11.40625" />
+          <ConnectorPoint PointX="4.947916666666667" PointY="11.406249999999998" />
+          <ConnectorPoint PointX="5.208333333333333" PointY="11.40625" />
+          <ConnectorPoint PointX="5.25" PointY="11.40625" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Pr__37A5467C" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.025940755208334" />
+          <ConnectorPoint PointX="4.947916666666667" PointY="14.025940755208334" />
+          <ConnectorPoint PointX="5.114583333333333" PointY="14.025940755208334" />
+          <ConnectorPoint PointX="5.25" PointY="14.025940755208334" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Ficha_has__Id_Us__398D8EEE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.166408004407053" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="10.482482439308173" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="10.600333569505931" />
+          <ConnectorPoint PointX="5.125" PointY="10.791408004407053" />
+          <ConnectorPoint PointX="5.125" PointY="13.370107169871796" />
+          <ConnectorPoint PointX="5.25" PointY="13.370107169871796" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__registro__Id_Usu__6EF57B66" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.4901432291666659" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="8.4901432291666659" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="8.4901432291666659" />
+          <ConnectorPoint PointX="5.25" PointY="8.4901432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="Program_Art_ProyectoModel.FK__Tipo_Usua__Id_Us__2D27B809" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.18486954286859" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="10.50094397776971" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="10.618795107967468" />
+          <ConnectorPoint PointX="5.03125" PointY="10.71611954286859" />
+          <ConnectorPoint PointX="5.03125" PointY="16.143992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="16.143992513020834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
