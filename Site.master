@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+
+<SCRIPT type=text/javascript>
+    function doClick(buttonName, e) {
+        //the purpose of this function is to allow the enter key to 
+        //point to the correct button to click.
+        var key;
+
+        if (window.event)
+            key = window.event.keyCode;     //IE
+        else
+            key = e.which;     //firefox
+
+        if (key == 13) {
+            //Get the button the user wants to have clicked
+            var btn = document.getElementById(buttonName);
+            if (btn != null) { //If we find the button click it
+                btn.click();
+                event.keyCode = 0
+            }
+        }
+    }
+</SCRIPT>
+
+<script type="text/javascript">
+
+    var Cronometro;
+
+    function Detenerse() {
+        clearInterval(Cronometro);
+    }
+
+    function carga() {
+        contador_s = 59;
+        contador_m = 14;
+
+        s = document.getElementById("segundos");
+        m = document.getElementById("minutos");
+        m.innerHTML = contador_m;
+
+        Cronometro = setInterval(
+		function () {
+		    if (contador_s == 0) {
+		        contador_s = 59;
+		        contador_m = contador_m - 1;
+		        m.innerHTML = contador_m;
+		        if (contador_m == 0) {
+		            contador_m = 0;
+		            contador_s = 0;
+		            alert("El tiempo del cronómetro se ha agotado");
+		            Detenerse();
+		        }
+		    }
+		    s.innerHTML = contador_s;
+		    contador_s = contador_s - 1;
+		}
+		, 1000);
+    }	
+	</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 96%;
+        }
+        .style2
+        {
+            text-align: center;
+        }
+        .style3
+        {
+            width: 728px;
+            height: 122px;
+        }
+        .menu
+        {
+            font-family: Arial;
+        }
+        .menu
+        {
+            font-family: arial;
+        }
+        .menu
+        {
+            font-size: small;
+        }
+        .menu
+        {
+            font-weight: 700;
+        }
+        .menu
+        {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    <table class="style1">
+                        <tr>
+                            <td class="style2">
+                                <img alt="Program" class="style3" src="Imagenes/Logo%20Program%20png.png"/></td>
+                            <td class="style2">
+                                <asp:Image ID="Image1" runat="server" Height="151px" 
+                                    ImageUrl="~/Imagenes/CDM.png" />
+                            </td>
+                        </tr>
+                    </table>
+&nbsp;</h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    onmenuitemclick="NavigationMenu_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio"/>
+                        <asp:MenuItem NavigateUrl="~/Ingresar.aspx" Text="Ingresar"/>
+                        <asp:MenuItem Text="¿Quiénes somos?" Value="¿Quienes somos?" 
+                            NavigateUrl="~/Quienes_Somos.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contáctenos" Value="Contactenos" 
+                            NavigateUrl="~/Contactenos.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+        Created by Program-Art&nbsp; Copyright 2015 - SENA - 683019</div>
+    </form>
+</body>
+</html>
